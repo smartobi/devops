@@ -1,0 +1,26 @@
+
+steps:-
+1. launch 3 ec2 (jenkins+Ansible+Webapp)
+2. ensure docker installed on Ansible and Webapp server + ssh connection
+3. steps
+
+........................................................
+
+jenkins:
+
+a) git checkout
+b) send codes (Dockerfile+playbooks) to ansible server over ssh..
+
+------------------------------------------------------------------
+
+Ansible:
+c) build docker image
+d) push docker image to dockerHub
+   run the playbook (ip of webapp)
+-----------------------------------------------------------------
+
+Webapp:
+d) Run conainer on webapp_server by pulling the same image from dockerhub
+
+5. rectify if any issue comes
+
