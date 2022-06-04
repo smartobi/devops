@@ -1,7 +1,7 @@
 FROM centos:latest
 RUN yum install -y httpd 
-RUN zip 
-RUN unzip
+RUN yum install -y zip 
+RUN yum install -y unzip
 
 ADD https://www.free-css.com/assets/files/free-css-templates/download/page279/newsoft.zip /var/www/html/
 WORKDIR /var/www/html/
