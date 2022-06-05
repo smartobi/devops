@@ -1,0 +1,4 @@
+- host: all
+  tasks:
+     - name: create new container
+     shell: docker run -itd --name dockeransible -p 9000:80 futumans/webpro
