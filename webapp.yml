@@ -1,6 +1,6 @@
 - hosts: all
   tasks:
-     - name: stop container
+     - name: stop containers
        shell: docker container  stop website3
      - name: remove containers
        shell: docker container rm website3
