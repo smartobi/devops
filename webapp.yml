@@ -5,4 +5,4 @@
      - name: deleting  old container
        shell: docker rm $(docker ps -aq)
      - name: create new container
-       shell: docker run -itd --name website -p 9000:80 futumans/webapp2
+       shell: docker run -itd --name website1 -p 9000:80 futumans/webapp2
