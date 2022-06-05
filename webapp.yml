@@ -1,4 +1,8 @@
 - hosts: all
   tasks:
+     - name: delete ungracefull shuting down of the containers
+       shell: docker kill $(docker ps -aq)
+     - name: deleting  old container
+       shell: docker rm $(docker ps -aq)
      - name: create new container
        shell: docker run -itd --name dockeransible -p 9000:80 futumans/webpro
