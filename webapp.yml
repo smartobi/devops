@@ -1,7 +1,7 @@
 - hosts: all
   tasks:
      - name: delete ungracefull shuting down of the containers
-       shell: docker kill $(docker ps -aq)
+       shell: docker stop $(docker ps -aq)
      - name: deleting  old container
        shell: docker rm $(docker ps -aq)
      - name: create new container
