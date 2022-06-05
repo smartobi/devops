@@ -2,7 +2,7 @@
   tasks:
      - name: stop container
        shell: docker container  stop website3
-     - name: remove container
+     - name: remove containers
        shell: docker container rm website3
      - name: docker image removal 
        shell: docker rmi -f futumans/webapp2
