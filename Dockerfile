@@ -1,9 +1,9 @@
 FROM centos:7
 RUN yum install -y httpd zip unzip
-ADD https://www.free-css.com/assets/files/free-css-templates/download/page279/newsoft.zip /var/www/html/ 
+ADD https://www.free-css.com/assets/files/free-css-templates/download/page279/ecourses.zip /var/www/html/ 
 WORKDIR /var/www/html/
-RUN unzip newsoft.zip
-RUN cp -rvf newsoft-html/* .
-RUN rm -rf newsoft-html newsoft.zip
+RUN unzip ecourses.zip
+RUN cp -rvf online-courses-html-template/* .
+RUN rm -rf online-courses-html-template ecourses.zip
 CMD ["/usr/sbin/httpd", "-D", "FOREGROUND"]
 EXPOSE 80
